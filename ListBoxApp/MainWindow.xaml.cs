@@ -158,7 +158,7 @@ namespace ListBoxApp
             }
         }
 
-        //Bouttons de manipulation 
+        //Manipulations buttons 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (TextBlock1.Text.Length == 0)
