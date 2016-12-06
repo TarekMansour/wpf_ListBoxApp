@@ -1,0 +1,203 @@
+﻿<Window Loaded="Window_Loaded" x:Class="ListBoxApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListBoxApp"
+        mc:Ignorable="d"
+        Title="ListeFruit" 
+        WindowStartupLocation="CenterScreen" MaxHeight="550" MaxWidth="550"
+        WindowState="Normal">
+    <ScrollViewer >
+        <Grid Margin="0,0,0,-54" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="27*"/>
+            </Grid.ColumnDefinitions>
+            <!--Article Label-->
+            <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,219,0">
+                <Label Name="ArticleLabel" Height="55"  Content="Article :" HorizontalAlignment="Center"  VerticalAlignment="Stretch" FontFamily="Yu Gothic Medium" FontSize="20" />
+            </StackPanel>
+
+            <!--TextBox Choice-->
+            <StackPanel Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Margin="1,0,106,0">
+                <TextBox x:Name="TextBlock1" Height="30" HorizontalAlignment="Left" Margin="8,14,0,0"  VerticalAlignment="Top" Width="182" />
+            </StackPanel>
+
+            <!--Listbox Stackpanel-->
+            <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,219,0">
+                <ListBox x:Name="FruitList" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="211" Height="400" SelectionMode="Multiple">
+                    <!--Item 0: Cerise-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage1" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btCerise_Click" >
+                                <Image x:Name="img1"  Source="/ListBoxApp;component/Images/cerise.jpg"/>
+                            </Button>
+                            <TextBlock Text="Cerise" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!--Item 1: Bananne-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage2" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btBanane_Click" >
+                                <Image x:Name="img2"  Source="/ListBoxApp;component/Images/banane.jpg"/>
+                            </Button>
+                            <TextBlock Text="Banane" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!--Item 2: Pasteque-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage3" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btPasteque_Click" >
+                                <Image x:Name="img3"  Source="/ListBoxApp;component/Images/Pasteque.jpg"/>
+                            </Button>
+                            <TextBlock Text="Pasteque" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!--Item 3: Ananas-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage4" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btAnanas_Click" >
+                                <Image x:Name="img4"  Source="/ListBoxApp;component/Images/Ananas.png"/>
+                            </Button>
+                            <TextBlock Text="Ananas" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!--Item 4: Fraise-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage5" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btFraise_Click" >
+                                <Image x:Name="img5"  Source="/ListBoxApp;component/Images/Fraise.jpg"/>
+                            </Button>
+                            <TextBlock Text="Fraise" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!--Item 5: Orange-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage6" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btOrange_Click" >
+                                <Image x:Name="img6"  Source="/ListBoxApp;component/Images/Orange.jpg"/>
+                            </Button>
+                            <TextBlock Text="Orange" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!--Item 6: Poire-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage7" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btPoire_Click" >
+                                <Image x:Name="img7"  Source="/ListBoxApp;component/Images/Poire.jpg"/>
+                            </Button>
+                            <TextBlock Text="Poire" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!--Item 7: Pomme-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage8" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btPomme_Click" >
+                                <Image x:Name="img8"  Source="/ListBoxApp;component/Images/Pomme.jpg"/>
+                            </Button>
+                            <TextBlock Text="Pomme" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!--Item 8: Kiwi-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage9" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btKiwi_Click" >
+                                <Image x:Name="img9"  Source="/ListBoxApp;component/Images/Kiwi.png"/>
+                            </Button>
+                            <TextBlock Text="Kiwi" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!--Item 9: Melon-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage10" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btMelon_Click" >
+                                <Image x:Name="img10"  Source="/ListBoxApp;component/Images/Melon.png"/>
+                            </Button>
+                            <TextBlock Text="Melon" />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!--Item 10: Pêches-->
+                    <ListBoxItem 
+            		FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="btImage11" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Height="40" Width="40" Click="btPêches_Click" >
+                                <Image x:Name="img11"  Source="/ListBoxApp;component/Images/Pêches.jpg"/>
+                            </Button>
+                            <TextBlock Text="Pêches" />
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </StackPanel>
+
+            <!--App Button -->
+            <!--Add Article Button-->
+            <StackPanel  Grid.Row="1" Grid.Column="1">
+                <TextBlock  TextWrapping="Wrap"   Text="Add article" FontFamily="Yu Gothic Medium" FontSize="15" HorizontalAlignment="Center" Margin="30,10,30,0" />
+                <Button HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Transparent" Click="Button_Click">
+                    <Image  Source="/ListBoxApp;component/Images/add.png" Height="40" Width="40"/>
+                </Button>
+
+                <!--Delete Article Button-->
+                <TextBlock  TextWrapping="Wrap" Text="Delete article" FontFamily="Yu Gothic Medium" FontSize="15" HorizontalAlignment="Center" Margin="30,10,30,0" />
+                <Button HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Transparent" Click="Button_Click_1" >
+                    <Image  Source="/ListBoxApp;component/Images/DeleteRed.png" Height="40" Width="40"/>
+                </Button>
+
+                <!--Delete Article Button-->
+                <TextBlock  TextWrapping="Wrap" Text="Slecet last" FontFamily="Yu Gothic Medium" FontSize="15" HorizontalAlignment="Center" Margin="30,10,30,0"  />
+                <Button HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Transparent" Click="Button_Click_2" >
+                    <Image  Source="/ListBoxApp;component/Images/selectlast.ico" Height="40" Width="40"/>
+                </Button>
+
+                <!--Delete Article Button-->
+                <TextBlock  TextWrapping="Wrap" Text="Select next" FontFamily="Yu Gothic Medium" FontSize="15" HorizontalAlignment="Center" Margin="30,10,30,0" />
+                <Button HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Transparent" Click="Button_Click_3" >
+                    <Image  Source="/ListBoxApp;component/Images/selectnext.png" Height="40" Width="40"/>
+                </Button>
+
+                <!--Delete Article Button-->
+                <TextBlock  TextWrapping="Wrap" Text="Select all" FontFamily="Yu Gothic Medium" FontSize="15" HorizontalAlignment="Center" Margin="30,10,30,0" />
+                <Button HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Transparent" Click="Button_Click_4" >
+                    <Image  Source="/ListBoxApp;component/Images/selectall.ico" Height="40" Width="40"/>
+                </Button>
+
+               
+
+
+
+            </StackPanel>
+
+
+
+
+
+        </Grid>
+    </ScrollViewer>
+</Window>
